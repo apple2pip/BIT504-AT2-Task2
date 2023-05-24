@@ -46,12 +46,6 @@ public class Board {
 	    return true;
 	}
 		 
-		
-		
-		
-
-		
-	}
 	
 	/** Return true if the current player "thePlayer" has won after making their move  */
 	public boolean hasWon(Player thePlayer, int playerRow, int playerCol) {
@@ -59,9 +53,10 @@ public class Board {
 		if(cells[playerRow][0].content == thePlayer && cells[playerRow][1].content == thePlayer && cells[playerRow][2].content == thePlayer )
 			return true; 
 		
-		 // TODO: Check if the player has 3 in the playerCol.
-		 // Hint: Use the row code above as a starting point, remember that it goes cells[row][column] 
-		
+		 // Check if the player has 3 in the playerCol.
+		 //Check if the player has 3 in the playerCol.
+		if(cells[playerCol][0].content == thePlayer && cells[playerCol][1].content == thePlayer && cells[playerCol][2].content == thePlayer )
+			return true; 
 		
 		
 		 // 3-in-the-diagonal
@@ -69,14 +64,15 @@ public class Board {
 			return true;
 		 
 		
-		// TODO: Check the diagonal in the other direction
-		
+		//Check the diagonal in the other direction
+		if( cells[2][0].content == thePlayer && cells[1][1].content == thePlayer && cells[0][2].content == thePlayer)
+			return true;		
 
 		
 		//no winner, keep playing
 		return false;
-	}
-	
+	} 
+			
 	/**
 	 * Draws the grid (rows then columns) using constant sizes, then call on the
 	 * Cells to paint themselves into the grid
