@@ -54,7 +54,6 @@ public class Board {
 			return true; 
 		
 		 // Check if the player has 3 in the playerCol.
-		 //Check if the player has 3 in the playerCol.
 		if(cells[playerCol][0].content == thePlayer && cells[playerCol][1].content == thePlayer && cells[playerCol][2].content == thePlayer )
 			return true; 
 		
