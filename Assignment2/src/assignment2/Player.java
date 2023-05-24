@@ -5,5 +5,5 @@ package assignment2;
  */
 
 public enum Player {
-	Empty, Cross, Nought
+	Empty, Cross, Noughts
 }
