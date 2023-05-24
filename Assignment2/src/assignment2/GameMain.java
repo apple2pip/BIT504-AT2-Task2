@@ -5,6 +5,7 @@ import java.awt.event.*;
 import javax.swing.*;
 
 import task2.Board;
+import task2.GameMain;
 import task2.GameMain.GameState;
 
 
@@ -82,7 +83,9 @@ public class GameMain extends JPanel implements MouseListener{
 				//create a main window to contain the panel
 				JFrame frame = new JFrame(TITLE);
 				
-				//TODO: create the new GameMain panel and add it to the frame
+				//create the new GameMain panel and add it to the frame
+	            GameMain gameMain = new GameMain();
+	            frame.getContentPane().add(gameMain);
 						
 				
 				
@@ -109,12 +112,12 @@ public class GameMain extends JPanel implements MouseListener{
 			if (currentPlayer == Player.Cross) {   
 			
 				//TODO: use the status bar to display the message "X"'s Turn
-
+				statusBar.setText("X's turn");
 				
 			} else {    
 				
 				//TODO: use the status bar to display the message "O"'s Turn
-
+				statusBar.setText("O's turn");
 				
 			}       
 			} else if (currentState == GameState.Draw) {          
