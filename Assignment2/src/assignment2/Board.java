@@ -2,9 +2,6 @@ package assignment2;
 
 import java.awt.*;
 
-import task2.Cell;
-import task2.GameMain;
-import task2.Player;
 
 public class Board {
 	// grid line width
